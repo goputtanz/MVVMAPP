@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -51,5 +52,15 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.0"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.0"
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+
+    // Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+
+    // OkHttp
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.8'
+
+    // Coil
+    implementation 'io.coil-kt:coil:2.1.0'
 
 }
