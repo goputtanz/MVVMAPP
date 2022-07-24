@@ -3,7 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/drawable/ic_arrow_back.xml" value="0.2505" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/drawable/ic_nasa_logo.xml" value="0.226" />
         <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/fragment_planetary.xml" value="0.2" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/fragment_planetary_details.xml" value="0.2" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/fragment_splash.xml" value="0.25416666666666665" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/item_planetary.xml" value="0.25416666666666665" />
+        <entry key="..\:/androidProjects/study/MachineTestNewAge/app/src/main/res/layout/item_planetary_list.xml" value="0.2390625" />
       </map>
     </option>
   </component>
