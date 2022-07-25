@@ -28,14 +28,4 @@ data class PlanetaryDataDtoItem(
     val title: String?,
     @Json(name = "url")
     val url: String?
-) : Parcelable {
-    fun toPlanetaryData(): PlanetaryData {
-        return PlanetaryData(
-            date = date,
-            explanation = explanation,
-            hdurl = hdurl,
-            title = title,
-            url = url
-        )
-    }
-}
+) : Parcelable
