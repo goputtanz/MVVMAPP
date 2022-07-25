@@ -4,7 +4,6 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 
-@TypeConverters(Converters::class)
 @Database(entities = [PlanetaryEntity::class], version = 1, exportSchema = false)
 abstract class PlanetaryDatabase :RoomDatabase(){
     abstract val planetaryDao: PlanetaryDao
