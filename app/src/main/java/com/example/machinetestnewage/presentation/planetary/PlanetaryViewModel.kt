@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.machinetestnewage.app.util.Resource
 import com.example.machinetestnewage.domain.model.PlanetaryData
 import com.example.machinetestnewage.domain.repository.PlanetaryRepository
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.collectLatest
@@ -12,6 +13,7 @@ import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+@HiltViewModel
 class PlanetaryViewModel @Inject constructor(
     private val repository: PlanetaryRepository
 ) : ViewModel() {

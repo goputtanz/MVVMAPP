@@ -1,4 +1,6 @@
 package com.example.machinetestnewage.presentation.planetary
 
-class PlanetaryDetailsViewModel {
+import androidx.lifecycle.ViewModel
+
+class PlanetaryDetailsViewModel:ViewModel() {
 }

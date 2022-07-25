@@ -1,6 +1,8 @@
 package com.example.machinetestnewage.data.repository
 
-import com.example.machinetestnewage.app.di.Constants
+import com.example.machinetestnewage.app.di.Constants.INTERNET_ERROR
+import com.example.machinetestnewage.app.di.Constants.SERVER_ERROR
+import com.example.machinetestnewage.app.di.Constants.UNKNOWN_ERROR
 import com.example.machinetestnewage.app.util.Resource
 import com.example.machinetestnewage.data.mapper.toData
 import com.example.machinetestnewage.data.mapper.toPlanetaryEntity
@@ -13,10 +15,8 @@ import com.skydoves.sandwich.StatusCode
 import com.skydoves.sandwich.suspendOnError
 import com.skydoves.sandwich.suspendOnException
 import com.skydoves.sandwich.suspendOnSuccess
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.*
 import javax.inject.Inject
 
 class PlanetaryRepositoryImpl @Inject constructor(
@@ -43,7 +43,7 @@ class PlanetaryRepositoryImpl @Inject constructor(
         } else {
             emit(Resource.Success(data))
         }
-    }
+    }.flowOn(Dispatchers.IO)
 
     private fun fetchFromDatabase(): Flow<List<PlanetaryData>> {
         return planetaryDao.getPlanetaryData().map { it.map { planetaryEntity -> planetaryEntity.toData() } }
@@ -52,14 +52,6 @@ class PlanetaryRepositoryImpl @Inject constructor(
     private suspend fun saveCategories(planetaryDataDtoItem: List<PlanetaryDataDtoItem>) {
         val planetaryEntities = planetaryDataDtoItem.map { it.toPlanetaryEntity() }
         planetaryDao.insertPlanetaryData(planetaryEntities)
-
-    }
-
-
-    companion object {
-        const val SERVER_ERROR = "Server error"
-        const val UNKNOWN_ERROR = "Unknown error"
-        const val INTERNET_ERROR = "Error. Please check your internet connection and try again"
 
     }
 
