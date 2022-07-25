@@ -18,5 +18,14 @@
         android:id="@+id/planetaryFragment"
         android:name="com.example.machinetestnewage.presentation.planetary.PlanetaryFragment"
         android:label="fragment_planetary"
-        tools:layout="@layout/fragment_planetary" />
+        tools:layout="@layout/fragment_planetary" >
+        <action
+            android:id="@+id/action_planetaryFragment_to_planetaryDetailsFragment"
+            app:destination="@id/planetaryDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planetaryDetailsFragment"
+        android:name="com.example.machinetestnewage.presentation.planetary.PlanetaryDetailsFragment"
+        android:label="fragment_planetary_details"
+        tools:layout="@layout/fragment_planetary_details" />
 </navigation>

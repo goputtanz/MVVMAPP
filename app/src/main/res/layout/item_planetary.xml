@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/authorProfileImage"
+        android:id="@+id/profileImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
@@ -19,19 +19,21 @@
 
     <TextView
         android:id="@+id/planetaryTitle"
-        style="@style/planetaryTitleText"
+        android:fontFamily="@font/roboto_bold"
+        android:textColor="@color/grey_800"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/authorProfileImage"
-        app:layout_constraintTop_toTopOf="@+id/authorProfileImage"
+        app:layout_constraintStart_toEndOf="@+id/profileImage"
+        app:layout_constraintTop_toTopOf="@+id/profileImage"
         tools:text="The cat's eye Nebula" />
 
     <TextView
         android:id="@+id/planetaryDate"
-        style="@style/planetaryDateText"
+        android:fontFamily="@font/roboto_regular"
+        android:textColor="@color/grey_800"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"

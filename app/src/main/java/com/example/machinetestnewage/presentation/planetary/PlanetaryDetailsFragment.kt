@@ -5,8 +5,10 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import com.example.machinetestnewage.R
 import com.example.machinetestnewage.databinding.FragmentPlanetaryDetailsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
 
+@AndroidEntryPoint
 class PlanetaryDetailsFragment : Fragment(R.layout.fragment_planetary_details) {
     private lateinit var binding: FragmentPlanetaryDetailsBinding
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
