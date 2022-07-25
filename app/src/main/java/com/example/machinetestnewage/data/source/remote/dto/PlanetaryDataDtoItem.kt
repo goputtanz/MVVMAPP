@@ -5,7 +5,6 @@ import android.os.Parcelable
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 import androidx.annotation.Keep
-import com.example.machinetestnewage.domain.model.PlanetaryData
 import kotlinx.parcelize.Parcelize
 
 @Keep
