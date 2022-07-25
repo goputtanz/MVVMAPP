@@ -5,6 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import coil.load
+import com.example.machinetestnewage.R
 import com.example.machinetestnewage.databinding.ItemPlanetaryBinding
 import com.example.machinetestnewage.domain.model.PlanetaryData
 
@@ -29,6 +31,9 @@ class PlanetaryAdapter(val listener: PlanetaryItemClick) :
             with(binding) {
                 planetaryTitle.setText(item.title)
                 planetaryDate.setText(item.date)
+                planetsImage.load(item.url){
+                    placeholder(R.drawable.image_placeholder)
+                }
                 root.setOnClickListener {
                     listener.onItemClick(item)
                 }

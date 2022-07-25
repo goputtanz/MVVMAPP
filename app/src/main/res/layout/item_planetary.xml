@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/profileImage"
+        android:id="@+id/planetsImage"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginStart="18dp"
@@ -26,8 +26,8 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profileImage"
-        app:layout_constraintTop_toTopOf="@+id/profileImage"
+        app:layout_constraintStart_toEndOf="@+id/planetsImage"
+        app:layout_constraintTop_toTopOf="@+id/planetsImage"
         tools:text="The cat's eye Nebula" />
 
     <TextView
@@ -44,7 +44,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
         android:background="?attr/colorControlNormal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

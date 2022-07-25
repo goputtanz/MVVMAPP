@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.example.machinetestnewage.R
 import com.example.machinetestnewage.databinding.FragmentPlanetaryBinding
 import com.example.machinetestnewage.domain.model.PlanetaryData
@@ -76,7 +77,11 @@ class PlanetaryFragment : Fragment(R.layout.fragment_planetary),
     }
 
     override fun onItemClick(item: PlanetaryData) {
-
+        findNavController().navigate(
+            PlanetaryFragmentDirections.actionPlanetaryFragmentToPlanetaryDetailsFragment(
+                item
+            )
+        )
     }
 
 
